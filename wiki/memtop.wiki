@@ -1,0 +1,61 @@
+#summary Displays memory consumption by processes in easy to read way.
+
+= Introduction =
+
+Python script for linux. Intended to help with diagnose and identification which processes uses most of RAM of PC.
+Typical situation is when you need to reduce RAM usage of your box.
+
+v0.4 is still very developmental one.
+
+
+== Example of output ==
+One example is better then ten lines of description
+{{{
+   PID |   private/writ. mem |  command                       22:44:38
+       |  current | previous | (truncated)           (waiting 15 min.)
+  3343 | 111.9 MB |          | /usr/lib/opera/9.62/opera-styleskulptu
+  3283 |  19.8 MB |    ++    | /usr/bin/plasma
+  7078 |  18.7 MB |    +     | /usr/bin/pcmanfm
+  3292 |  12.4 MB |          | kxkb
+  3278 |  11.0 MB |          | ksmserver
+  7737 |   9.0 MB |    +++   | python/home/johny/programs/mtvcgui/trun
+  3280 |   8.0 MB |    +     | kwin
+  3272 |   6.5 MB |          | kded4
+  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
+       RAM usage: |===================    77.6 %
+
+   PID |   private/writ. mem |  command                       22:59:41
+       |  current | previous | (truncated)           (waiting 15 min.)
+  3343 | 111.9 MB |          | /usr/lib/opera/9.62/opera-styleskulptu
+  7078 |  26.9 MB |    +++   | /usr/bin/pcmanfm
+  3283 |  19.8 MB |          | /usr/bin/plasma
+  3292 |  12.4 MB |          | kxkb
+  3278 |  11.0 MB |          | ksmserver
+  7737 |   9.0 MB |          | python/home/johny/programs/mtvcgui/trun
+  3280 |   8.0 MB |          | kwin
+  3272 |   6.5 MB |          | kded4
+  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
+       RAM usage: |====================    78.4 %
+
+   PID |   private/writ. mem |  command                       23:14:44
+       |  current | previous | (truncated)           (waiting 15 min.)
+  3343 | 111.1 MB |   -      | /usr/lib/opera/9.62/opera-styleskulptu
+  7078 |  26.9 MB |          | /usr/bin/pcmanfm
+  3283 |  19.8 MB |          | /usr/bin/plasma
+  3292 |  12.4 MB |          | kxkb
+  3278 |  11.0 MB |          | ksmserver
+  7737 |   9.0 MB |          | python/home/johny/programs/mtvcgui/trun
+  3280 |   8.0 MB |          | kwin
+  3272 |   6.5 MB |          | kded4
+  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
+       RAM usage: |====================    78.1 %
+}}}
+
+
+== Use ==
+
+No installation is needed, just run the script. Available parameters are
+
+-p (number in minutes)
+
+-s graph|numb - two alternatives how to present mainly data from former iteration
