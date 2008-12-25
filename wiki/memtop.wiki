@@ -56,6 +56,8 @@ One example is better then ten lines of description
 
 No installation is needed, just run the script. Available parameters are
 
--p (number in minutes)
+-p (number in minutes)   - wait time between iterations
 
--s graph|numb - two alternatives how to present mainly data from former iteration
+-s graph|numb     - two alternatives how to present mainly data from former iteration
+
+Important note: The script should be run as root or you want get data for processes running under other users.
