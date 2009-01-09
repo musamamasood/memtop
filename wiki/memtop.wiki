@@ -61,3 +61,7 @@ No installation is needed, just run the script. Available parameters are
 -s graph|numb     - two alternatives how to present mainly data from former iteration
 
 Important note: The script should be run as root or you want get data for processes running under other users.
+
+== Why memtop and not (h)top? ==
+
+Thanks for asking this question. Answer is simple, htop offers mutliple types of memory consumption if you are able to understand them, then it is fine, if you want only one single number, memtop is for you. It uses output of pmap command (pmap -d $PID), look at last line for private/writeable data. This is memory that is used only by this one process, regardles if swapped or in RAM. This script gets this numbers and present them in friendly manner.
