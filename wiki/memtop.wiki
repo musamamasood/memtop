@@ -6,7 +6,7 @@ Python script for linux. Intended to help with diagnose and identification which
 
 Typical situation is when you need to reduce RAM usage of your box. 
 
-It uses output of pmap tool. Use 'pmad -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill process the overall memory consumption of the box will decrease by this value'. Though, memory management is complicated thing :(
+It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill process the overall memory consumption of the box will decrease by this value'. Though, memory management is complicated thing :(
 
 For latest changes (in v 0.9.2) see the bottom of page.
 
