@@ -60,8 +60,19 @@ No installation is needed, just run the script. Available parameters are
 
 -s graph|numb     - two alternatives how to present mainly data from former iteration
 
+-l $integer       - number of lines - processes to show
+
+-h                - help
+
+
 Important note: The script should be run as root or you will not get data for processes running under other users.
 
 == Why memtop and not (h)top? ==
 
 Thanks for asking this question. Answer is simple, htop offers mutliple types of memory consumption if you are able to understand them, then it is fine. However, if you want only one single number, memtop is for you. It uses output of pmap command (pmap -d $PID), look at last line for private/writeable data. This is memory that is used only by this one process, regardles if swapped or in RAM. This script gets this numbers and present them in friendly manner.
+
+== Changes in 0.9.2 ==
+
+This is a new version after some 3 years, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem wasthat the grep command used to return error "Binary file matches". It showed that names of programs contained binary characters, not visible in console but still affecting grep.
+
+**Any comments welcomed**
