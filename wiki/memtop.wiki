@@ -6,7 +6,7 @@ Python script for linux. Intended to help with diagnose and identification which
 
 Typical situation is when you need to reduce RAM usage of your box. 
 
-It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill process the overall memory consumption of the box will drop by this value'. Though, memory management is complicated thing :( 
+It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill the respective process the overall memory consumption of the box will drop by this value'. Though, memory management is complicated thing :( 
 
 So *be aware that memtop do not consider/show shared memory* (amount of memory used by more than single process). Of course, if you kill enough processes, some previously shared memory could change to private...
 
@@ -71,11 +71,11 @@ No installation is needed, just run the script. Available parameters are
 -h                - help
 
 
-Important note: The script should be run as root or you will not get data for processes running under other users.
+Important note: The script should be *run as root* or you will not get data for processes running under other users.
 
 == Why memtop and not (h)top? ==
 
-Thanks for asking this question. Answer is simple, htop offers mutliple types of memory consumption if you are able to understand them, then it is fine. However, if you want only one single number, memtop is for you. It uses output of pmap command (pmap -d $PID), look at last line for private/writeable data. This is memory that is used only by this one process, regardles if swapped or in RAM. This script gets this numbers and present them in friendly manner.
+Thanks for asking this question. Answer is simple, htop offers mutliple types of memory consumption if you are able to understand them, then it is fine. However, if you want only one single number, memtop is for you. 
 
 == Changes in 0.9.2 ==
 
