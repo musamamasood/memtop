@@ -54,6 +54,7 @@ One example is better then ten lines of description
        RAM usage: |====================    78.1 %
 }}}
 
+This example shows "graph" mode, and here the third column "previous" indicates change against previous iteration. It is just to visualise what program (its RAM occupation) is growing or shrinking.
 
 == Use ==
 
