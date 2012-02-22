@@ -8,7 +8,7 @@ Typical situation is when you need to reduce RAM usage of your box.
 
 It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill process the overall memory consumption of the box will drop by this value'. Though, memory management is complicated thing :( 
 
-So **be aware that memtop do not consider/show shared memory** (amount of memory used by more than single process). Of course, if you kill enough processes, some previously shared memory could change to private...
+So *be aware that memtop do not consider/show shared memory* (amount of memory used by more than single process). Of course, if you kill enough processes, some previously shared memory could change to private...
 
 For latest changes (in v 0.9.2) see the bottom of page.
 
@@ -81,4 +81,4 @@ Thanks for asking this question. Answer is simple, htop offers mutliple types of
 
 This is a new version after some 3 years, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem wasthat the grep command used to return error "Binary file matches". It showed that names of programs contained binary characters, not visible in console but still affecting grep.
 
-**Any comments welcomed**
+**Any comments welcomed!!!**
