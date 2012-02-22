@@ -3,9 +3,12 @@
 = Introduction =
 
 Python script for linux. Intended to help with diagnose and identification which processes uses most of RAM of PC.
-Typical situation is when you need to reduce RAM usage of your box.
 
-v0.7 proved to be stable, new version 0.9 has new features, improved formatting and colored output in case of some warnings.
+Typical situation is when you need to reduce RAM usage of your box. 
+
+It uses output of pmap tool. Use 'pmad -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill process the overall memory consumption of the box will decrease by this value'. Though, memory management is complicated thing :(
+
+For latest changes (in v 0.9.2) see the bottom of page.
 
 
 == Example of output ==
