@@ -8,7 +8,7 @@ Typical situation is when you need to reduce RAM usage of your box.
 
 It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill the respective process the overall memory consumption of the box will drop by this value'. Though, memory management is complicated thing :( and I'm far from being an expert. So if you have more question or any doubts about what the numbers present you have to consult pmap manpage.
 
-For latest changes (in v 0.9.2) see the bottom of page.
+For latest changes (in v 0.9.2) see the bottom of this page.
 
 
 == Example of output ==
