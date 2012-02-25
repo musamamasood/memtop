@@ -60,7 +60,7 @@ This example shows "graph" mode, and here the third column "previous" indicates 
 
 No installation is needed, just run the script. Available parameters are
 
--p (number in minutes)   - wait time between iterations
+-p $integer       - wait time between iterations (in minutes)
 
 -s graph|numb     - two alternatives how to present mainly data from former iteration
 
