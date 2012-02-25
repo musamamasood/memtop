@@ -77,6 +77,6 @@ Thanks for asking this question. Answer is simple, htop offers mutliple types of
 
 == Changes in 0.9.2 ==
 
-This is a new version after some 3 years, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem wasthat the grep command used to return error "Binary file matches". It showed that names of programs contained binary characters, not visible in console but still affecting grep.
+This is a new version after some 3 years, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem was that the grep command used to return error "Binary file matches". It showed that names of listed programs contained binary characters, not visible in console but still affecting grep.
 
 **Any comments welcomed!!!**
