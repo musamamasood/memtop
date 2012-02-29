@@ -75,7 +75,7 @@ Important note: The script should be *run as root* or you will not get data for 
 
 <br>
 
-== Extended memory use info introduced from 0.9.4 ==
+== Additional memory utilization info, introduced from 0.9.4 ==
 
 From this release you can use swith "-m"/"-more" to get two additional lines:
 
@@ -84,8 +84,8 @@ From this release you can use swith "-m"/"-more" to get two additional lines:
   1156 |  24.7 MB |    ++++  |/usr/sbin/rsyslogd -c4                                                            
  11192 |  21.2 MB |    ++++  |tea                                                                               
     Writeable/RAM: =================================  76.7%
-    RAM use without cached pages: 43.3% , SWAP use: 50.3%
-    Swapping: 0/0, Paging: 0/4 (in/out / sec). Status in words: None or negligible.
+->  RAM use without cached pages: 43.3% , SWAP use: 50.3%
+->  Swapping: 0/0, Paging: 0/4 (in/out / sec). Status in words: None or negligible.
 }}}
 
 While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
