@@ -64,16 +64,11 @@ This example shows "graph" mode, and here the third column "previous" indicates 
 No installation is needed, just run the script. Available parameters are
 
 || -p $integer   ||wait time between iterations (in minutes)||
+||-s graph|numb||two alternatives how to present mainly data from former iteration||
+|| -l $integer||number of lines - processes to show||
+||-m ||more info about memory utilization (since 0.9.4)||
+||-h||help||
 
--p $integer       - wait time between iterations (in minutes)
-
--s graph|numb     - two alternatives how to present mainly data from former iteration
-
--l $integer       - number of lines - processes to show
-
--m                - more info about memory utilization (since 0.9.4)
-
--h                - help
 
 
 Important note: The script should be *run as root* or you will not get data for processes running under other users.
