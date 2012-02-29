@@ -71,6 +71,38 @@ No installation is needed, just run the script. Available parameters are
 
 Important note: The script should be *run as root* or you will not get data for processes running under other users.
 
+== Extended memory use info introduced from 0.9.4 ==
+
+From this release you can use swith "-m"/"-more" to get two additional lines:
+
+   ...........................
+  1156 |  24.7 MB |    ++++  |/usr/sbin/rsyslogd -c4                                                            
+ 11192 |  21.2 MB |    ++++  |tea                                                                               
+    Writeable/RAM: =================================  76.7%
+    RAM use without cached pages: 43.3% , SWAP use: 50.3%
+    Swapping: 0/0, Paging: 0/4 (in/out / sec). Status in words: None or negligible.
+
+
+While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
+
+  * MemTotal - as size of your RAM
+  * MemFree - as free portion of RAM
+  * Cached -  in-memory cache for files read from the disk... this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
+
+For SWAP use it uses SwapTotal & SwapFree
+
+Another and last new line is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. Here I also added "Text evaluation" of numbers for better. This test examines 5 seconds period but numbers are second averages.
+
+The scale for text evaluation is below. The memtop sums all 4 numbers together and then based on result if:
+
+  * sum < 20 None or negligible.
+  * sum < 50 Increased, but still no problem.
+  * sum < 150 Something is going on?
+  * sum < 600 Swapping/paging intensively!
+  * else: System went crazy!!!!
+
+Feel free to suggest any changes to the scale, my experiences with paging are very limited...
+
 == Why memtop and not (h)top? ==
 
 Thanks for asking this question. Answer is simple, htop offers mutliple types of memory consumption if you are able to understand them, then it is fine. However, if you want only one single number, memtop is for you. 
