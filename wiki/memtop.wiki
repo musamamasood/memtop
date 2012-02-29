@@ -4,9 +4,17 @@
 
 Python script for linux. Intended to help with diagnose and identification which processes uses most of RAM of PC.
 
-Typical situation is when you need to reduce RAM usage of your box. 
+Typical situation is when you need to reduce RAM usage of your box or you want to monitor your system for longer period of time to find out misbehaving applications. 
 
-It uses output of pmap tool. Use 'pmap -d $PID' and scan last line for 'writeable/private:'.  This number could be interpreted like this: 'If you kill the respective process the overall memory consumption of the box will drop by this value'. Though, memory management is complicated thing :( and I'm far from being an expert. So if you have more question or any doubts about what the numbers present you have to consult pmap manpage.
+The script calculates amount of private/writeable for each process (using /proc/$PID/maps files) and prints biggest ones. It completely ignores private/non-writeable and shared memory. The reasons are:
+
+  * shared memory is hard to interpret and at the end you still can not say 'how much memory is proces x taking'.
+  * when tracking memory use of a process over time, private/writeable memory is most iteresting portion of process memory use. Memtop will help you to find out how it changes over time. Also keep in mind that problems like memory leaks will be shown just in this number...
+  * private/writeable memory is supposed to be an amount that will be freed in 'memory' (here the term includes both: RAM and swap) when process terminates
+  * if you still need shared memory info, you can go elsewhere :)
+
+In addition to pure listing of processes and their memory use, it can track memory use in general way and help you identify periods when your system is short of RAM and how bad it is. For more info, scroll down to "Additional memory utilization info" section.
+
 
 For latest changes (in v 0.9.2) see the bottom of this page.
 
