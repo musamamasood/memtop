@@ -103,7 +103,7 @@ While "writeable" information can be used to track memory use of single processe
 
 For SWAP use it uses SwapTotal & SwapFree
 
-Another and last new line is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. Here I also added "Text evaluation" of numbers for better. This test examines 5 seconds period but numbers are second averages.
+Second new line and last on in the example is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. Here I also added "Text evaluation" of numbers for better. This test examines 5 seconds period but numbers are second averages.
 
 The scale for text evaluation is below. The memtop sums all 4 numbers together and then based on result it prints:
 
