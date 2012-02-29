@@ -66,10 +66,14 @@ No installation is needed, just run the script. Available parameters are
 
 -l $integer       - number of lines - processes to show
 
+-m                - more info about memory utilization (since 0.9.4)
+
 -h                - help
 
 
 Important note: The script should be *run as root* or you will not get data for processes running under other users.
+
+<br>
 
 == Extended memory use info introduced from 0.9.4 ==
 
