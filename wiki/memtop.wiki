@@ -16,7 +16,6 @@ The script calculates amount of private/writeable for each process (using /proc/
 In addition to pure listing of processes and their memory use, it can track memory use in general way and help you identify periods when your system is short of RAM and how bad it is. For more info, scroll down to "Additional memory utilization info" section.
 
 
-For latest changes (in v 0.9.2) see the bottom of this page.
 
 <br>
 
