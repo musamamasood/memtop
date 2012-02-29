@@ -87,8 +87,8 @@ From this release you can use swith "-m"/"-more" to get two additional lines:
 While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
 
   * MemTotal - as size of your RAM
-  * MemFree - as free portion of RAM
-  * Cached -  in-memory cache for files read from the disk... this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
+  * MemFree  - as free portion of RAM
+  * Cached   -  in-memory cache for files read from the disk... this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
 
 For SWAP use it uses SwapTotal & SwapFree
 
