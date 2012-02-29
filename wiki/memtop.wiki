@@ -85,7 +85,7 @@ Important note: The script should be *run as root* or you will not get data for 
 
 == Additional memory utilization info, introduced from 0.9.4 ==
 
-From this release you can use swith "-m"/"-more" to get two additional lines:
+From this release you can use swith "-m" / "-more" to get two additional lines:
 
 {{{
    ...........................
@@ -100,18 +100,18 @@ While "writeable" information can be used to track memory use of single processe
 
   * MemTotal - as size of your RAM
   * MemFree  - as free portion of RAM
-  * Cached   -  in-memory cache for files read from the disk... this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
+  * Cached   - "...in-memory cache for files read from the disk..." - this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
 
 For SWAP use it uses SwapTotal & SwapFree
 
 Another and last new line is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. Here I also added "Text evaluation" of numbers for better. This test examines 5 seconds period but numbers are second averages.
 
-The scale for text evaluation is below. The memtop sums all 4 numbers together and then based on result if:
+The scale for text evaluation is below. The memtop sums all 4 numbers together and then based on result it prints:
 
-  * sum < 20 None or negligible.
-  * sum < 50 Increased, but still no problem.
-  * sum < 150 Something is going on?
-  * sum < 600 Swapping/paging intensively!
+  * sum < 20: None or negligible.
+  * sum < 50: Increased, but still no problem.
+  * sum < 150: Something is going on?
+  * sum < 600: Swapping/paging intensively!
   * else: System went crazy!!!!
 
 Feel free to suggest any changes to the scale, my experiences with paging are very limited...
