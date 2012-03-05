@@ -1,4 +1,4 @@
-#summary Displays memory consumption by processes in easy to read way.
+#summary Displays memory consumption of processes in easy to read way.
 
 = Introduction =
 
