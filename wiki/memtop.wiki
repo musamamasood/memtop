@@ -11,7 +11,7 @@ The script calculates amount of private/writeable for each process (using /proc/
   * shared memory is hard to interpret and at the end you still can not say 'how much memory is proces x taking'.
   * when tracking memory use of a process over time, private/writeable memory is most iteresting portion of process's memory use. Memtop will help you to find out how it changes over time. Also keep in mind that problems like memory leaks will be shown just in this number...
   * private/writeable memory is supposed to be an amount that will be freed in 'memory' (here the term includes both: RAM and swap) when process terminates
-  * there are other tools to show this kind of info, so no need to include it also here
+  * there are other tools to show this kind of info (shared memory use), so there is no need to have it included also here
 
 
 In addition to pure listing of processes and their memory use, it can track memory use in general way and help you identify periods when your system is short of RAM and how bad it is. For more info, scroll down to "Additional memory utilization info" section.
