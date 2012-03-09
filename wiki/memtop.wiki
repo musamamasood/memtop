@@ -87,41 +87,34 @@ Important note: The script should be *run as root* or you will not get data for 
 
 From this release you can use swith "-m" / "-more" to get two additional lines:
 
-{{{
-   ...........................
-  1156 |  24.7 MB |    ++++  |/usr/sbin/rsyslogd -c4                                                            
- 11192 |  21.2 MB |    ++++  |tea                                                                               
-    Writeable/RAM: =================================  76.7%
-    RAM use without cached pages: 43.3% , SWAP use: 50.3%                            <-  here
-    Swapping: 0/0, Paging: 0/4 (in/out / sec). Status in words: None or negligible.    <-  here
+{{{# python3 memtop-0.9.5.py -m -p 2 -l 2
+
+   PID |   private/writ. mem |command                        09 Mar 08:30:42
+       |  current |  change  |(might be truncated)          (waiting 2 min.)
+  5801 | 291.6 MB |  --      |/usr/lib/iceweasel/firefox-bin                
+ 11457 | 182.6 MB |          |gimp                                          
+   Writeable/RAM: =========================  90.7%
+   RAM use without cached pages: 48.7% , SWAP use: 32.7%
+   Swapping: 0.1 / 0.0, Paging: 0.7 / 31.1 (in/out / sec / period)
 }}}
 
 While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
 
-  * MemTotal - as size of your RAM
-  * MemFree  - as free portion of RAM
+  * Memtotal - as size of your RAM
+  * Memfree  - as free portion of RAM
   * Cached   - "...in-memory cache for files read from the disk..." - this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
 
-For SWAP use it uses SwapTotal & SwapFree
+For SWAP use it uses Swaptotal & Swapfree
 
-Second new line and last one in the example is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. Here I also added "Text evaluation" of numbers for better. This test examines 5 seconds period but numbers are second averages.
-
-The scale for text evaluation is below. The memtop sums all 4 numbers together and then based on result it prints:
-
-  * sum < 20: None or negligible.
-  * sum < 50: Increased, but still no problem.
-  * sum < 150: Something is going on?
-  * sum < 600: Swapping/paging intensively!
-  * else: System went crazy!!!!
-
-Feel free to suggest any changes to the scale, my experiences with paging are very limited...
+Second new line and last one in the example is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. 
 
 
 <br>
 
 == Changes after 0.9.0 ==
 
-This is a new version after some 3 years, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem was that the grep command used to return error "Binary file matches". It showed that names of listed programs contained binary characters, not visible in console but still affecting grep.
+After some three years I resumed my work on this tool, I "ported" it to python3 (still working with version 2.7 at least) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem was that the grep command used to return error "Binary file matches". It showed that names of listed programs contained binary characters, not visible in console but still affecting grep.
+Also I added info about swapping/pagging (see above) and made couple of cosmethic enhancements and internall house-keeping of the code.
 
 <br>
 
