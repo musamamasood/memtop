@@ -87,7 +87,8 @@ Important note: The script should be *run as root* or you will not get data for 
 
 From this release you can use swith "-m" / "-more" to get two additional lines:
 
-{{{# python3 memtop-0.9.5.py -m -p 2 -l 2
+{{{
+# python3 memtop-0.9.5.py -m -p 2 -l 2
 
    PID |   private/writ. mem |command                        09 Mar 08:30:42
        |  current |  change  |(might be truncated)          (waiting 2 min.)
