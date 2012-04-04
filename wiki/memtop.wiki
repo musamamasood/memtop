@@ -125,6 +125,10 @@ From 0.9.6 you can use swith -L/--log that will create file memtop.log in curren
 04/04/2012 14:28    98.9    58.1   19.3
 }}}
 
+The columns are: writeable/RAM; RAM use / total RAM, SWAP use / total swap. (exactly the same numbers you see in console output)
+
+
+
 With memtop-graph.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (must be in same directory)
 
 {{{
