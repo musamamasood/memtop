@@ -112,7 +112,7 @@ Second new line and last one in the example is about swapping & paging. This inf
 
 <br>
 
-== Loging + graphs generation (from 0.9.6) ==
+== Loging + Graphs from logs (from 0.9.6) ==
 
 From 0.9.6 you can use swith -L/--log that will create file memtop.log in current directory, with content like:
 
