@@ -136,7 +136,7 @@ The columns are:
 
 
 
-With memtop-graph-vX.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (memtop-graph-*.gp expects memtop.log file in current directory)
+With memtop-graph-vX.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (memtop-graph-vX.gp expects memtop.log file in current directory)
 
 {{{
    $ ./memtop-graph.pg > anyname.png    
