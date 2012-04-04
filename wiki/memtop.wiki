@@ -75,6 +75,7 @@ No installation is needed, just run the script. Available parameters are
 ||-s graph|numb||two alternatives how to present mainly data from former iteration||
 || -l $integer||number of lines - processes to show||
 ||-m ||more info about memory utilization (since 0.9.4)||
+|| -L || log data to file, see graphs below||
 ||-h||help||
 
 
@@ -125,7 +126,13 @@ From 0.9.6 you can use swith -L/--log that will create file memtop.log in curren
 04/04/2012 14:28    98.9    58.1   19.3
 }}}
 
-The columns are: writeable/RAM; RAM use / total RAM, SWAP use / total swap. (exactly the same numbers you see in console output)
+The columns are: 
+
+  * writeable/RAM
+  * RAM use / total RAM
+  * SWAP use / total swap. 
+
+(the very same same numbers you see in console output)
 
 
 
