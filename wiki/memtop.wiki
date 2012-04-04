@@ -136,17 +136,16 @@ The columns are:
 
 
 
-With memtop-graph.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (must be in same directory)
+With memtop-graph-vX.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (memtop-graph-*.gp expects memtop.log file in current directory)
 
 {{{
    $ ./memtop-graph.pg > anyname.png    
 }}}
 
-and you can get image like this (the drop ocured when I turned off the firefox). 
-
+and you can get image like this: 
 http://memtop.googlecode.com/files/memtop-graph.png
 
-DISCLAIMER: Memtop version 0.9.6 and memtop-graph.pg version 1 are development versions.
+DISCLAIMER: Memtop version 0.9.6 and memtop-graph-v2.pg 1 are development versions.
 
 <br>
 
