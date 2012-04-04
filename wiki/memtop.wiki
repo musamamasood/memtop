@@ -139,6 +139,8 @@ and you can get image like this (the drop ocured when I turned off the firefox).
 
 http://memtop.googlecode.com/files/memtop-graph.png
 
+DISCLAIMER: Memtop version 0.9.6 and memtop-graph.pg version 1 are development versions.
+
 <br>
 
 == Changes after 0.9.0 ==
