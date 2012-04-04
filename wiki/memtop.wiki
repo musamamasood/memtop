@@ -75,7 +75,7 @@ No installation is needed, just run the script. Available parameters are
 ||-s graph|numb||two alternatives how to present mainly data from former iteration||
 || -l $integer||number of lines - processes to show||
 ||-m ||more info about memory utilization (since 0.9.4)||
-|| -L || log data to file, see graphs below||
+|| -L || log data to file, see section about graphs below||
 ||-h||help||
 
 
