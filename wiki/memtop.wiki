@@ -127,9 +127,11 @@ From 0.9.6 you can use swith -L/--log that will create file memtop.log in curren
 
 With memtop-graph.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (must be in same directory)
 
+{{{
    $ ./memtop-graph.pg >memtop-graph.png
+}}}
 
-and you can get image like this (the drop in use was caused when I turn off the firefox)
+and you can get image like this (the drop ocured when I turned off the firefox)
 
 http://memtop.googlecode.com/files/memtop-graph.png
 
