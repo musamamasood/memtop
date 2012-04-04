@@ -146,7 +146,7 @@ and you can get image like this:
 
 http://memtop.googlecode.com/files/out.png
 
-Really, nothing interesting to see here, swap is even not used altogether. Later, I will put here graph from longer period.
+Really, nothing interesting to see here, swap is even not used altogether. Later, I will put here graph from some longer period.
 
 DISCLAIMER: Memtop version 0.9.6 and memtop-graph-v2.pg 1 are development versions.
 
