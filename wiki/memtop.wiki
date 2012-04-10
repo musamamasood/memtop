@@ -146,9 +146,9 @@ and you can get image like this:
 
 http://memtop.googlecode.com/files/out.png
 
-Really, nothing interesting to see here, swap is even not used altogether. Later, I will put here graph from some longer period.
+Of course, nothing special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heapily. The drop on the end of graph happened when I killed those instances.
 
-DISCLAIMER: Memtop version 0.9.6 and memtop-graph-v2.pg 1 are development versions.
+
 
 <br>
 
