@@ -23,44 +23,37 @@ In addition to pure listing of processes and their memory use, it can track memo
 == Example of output ==
 One example is better then ten lines of description
 {{{
-   PID |   private/writ. mem |  command                       22:44:38
-       |  current | previous | (truncated)           (waiting 15 min.)
-  3343 | 111.9 MB |          | /usr/lib/opera/9.62/opera-styleskulptu
-  3283 |  19.8 MB |    ++    | /usr/bin/plasma
-  7078 |  18.7 MB |    +     | /usr/bin/pcmanfm
-  3292 |  12.4 MB |          | kxkb
-  3278 |  11.0 MB |          | ksmserver
-  7737 |   9.0 MB |    +++   | python/home/johny/programs/mtvcgui/trun
-  3280 |   8.0 MB |    +     | kwin
-  3272 |   6.5 MB |          | kded4
-  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
-       RAM usage: |===================    77.6 %
+   PID |   private/writ. mem |command                                                       10 Apr 11:30:22
+       |  current |  change  |(might be truncated)                                         (waiting 1 min.)
+ 18005 | 400.9 MB |    +     |/opt/firefox-10/firefox                                                      
+  8530 |  91.0 MB |          |/usr/lib/virtualbox/VirtualBox --comment ArchLin --startvm 7ed0ed70-e8c6-4b8a
+  3187 |  69.4 MB |          |tea                                                                          
+  2663 |  57.6 MB |          |xfce4-terminal                                                               
+ 30024 |  55.6 MB |          |/usr/lib/openoffice/program/soffice.bin -writer -splash-pipe=5               
+  2724 |  51.3 MB |          |geany                                                                        
+ 18253 |  47.8 MB |          |/opt/firefox-10/plugin-container /usr/lib/flashplayer-mozilla/libflashplayer.
+  1726 |  26.7 MB |          |/usr/bin/X :0 -audit 0 -auth /var/lib/gdm/:0.Xauth -nolisten tcp vt7         
+  1578 |  24.9 MB |          |/usr/sbin/rsyslogd -c4                                                       
+ 24192 |  23.1 MB |          |/usr/lib/virtualbox/VirtualBox                                               
+   Writeable/RAM: ===============================  80.0%
+   RAM use without cached pages: 43.4% , SWAP use: 19.9%                 # enabled with -m option
+   Swapping: 0.0 / 0.0, Paging: 0.0 / 6.2 (in/out / sec / period)        # enabled with -m option
 
-   PID |   private/writ. mem |  command                       22:59:41
-       |  current | previous | (truncated)           (waiting 15 min.)
-  3343 | 111.9 MB |          | /usr/lib/opera/9.62/opera-styleskulptu
-  7078 |  26.9 MB |    +++   | /usr/bin/pcmanfm
-  3283 |  19.8 MB |          | /usr/bin/plasma
-  3292 |  12.4 MB |          | kxkb
-  3278 |  11.0 MB |          | ksmserver
-  7737 |   9.0 MB |          | python/home/johny/programs/mtvcgui/trun
-  3280 |   8.0 MB |          | kwin
-  3272 |   6.5 MB |          | kded4
-  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
-       RAM usage: |====================    78.4 %
-
-   PID |   private/writ. mem |  command                       23:14:44
-       |  current | previous | (truncated)           (waiting 15 min.)
-  3343 | 111.1 MB |   -      | /usr/lib/opera/9.62/opera-styleskulptu
-  7078 |  26.9 MB |          | /usr/bin/pcmanfm
-  3283 |  19.8 MB |          | /usr/bin/plasma
-  3292 |  12.4 MB |          | kxkb
-  3278 |  11.0 MB |          | ksmserver
-  7737 |   9.0 MB |          | python/home/johny/programs/mtvcgui/trun
-  3280 |   8.0 MB |          | kwin
-  3272 |   6.5 MB |          | kded4
-  4556 |   3.4 MB |          | /usr/lib/opera/9.62//operapluginwrapper
-       RAM usage: |====================    78.1 %
+   PID |   private/writ. mem |command                                                       10 Apr 11:31:21
+       |  current |  change  |(might be truncated)                                         (waiting 1 min.)
+ 18005 | 382.1 MB | ---      |/opt/firefox-10/firefox                                                      
+  8530 |  91.0 MB |          |/usr/lib/virtualbox/VirtualBox --comment ArchLin --startvm 7ed0ed70-e8c6-4b8a
+  3187 |  69.4 MB |          |tea                                                                          
+  2663 |  57.6 MB |          |xfce4-terminal                                                               
+ 30024 |  55.6 MB |          |/usr/lib/openoffice/program/soffice.bin -writer -splash-pipe=5               
+  2724 |  51.3 MB |          |geany                                                                        
+ 18253 |  47.8 MB |          |/opt/firefox-10/plugin-container /usr/lib/flashplayer-mozilla/libflashplayer.
+  1726 |  26.7 MB |          |/usr/bin/X :0 -audit 0 -auth /var/lib/gdm/:0.Xauth -nolisten tcp vt7         
+  1578 |  24.9 MB |          |/usr/sbin/rsyslogd -c4                                                       
+ 24192 |  23.1 MB |          |/usr/lib/virtualbox/VirtualBox                                               
+   Writeable/RAM: ==============================  78.8%
+   RAM use without cached pages: 43.0% , SWAP use: 19.9%
+   Swapping: 0.0 / 0.0, Paging: 0.0 / 3.3 (in/out / sec / period)
 }}}
 
 This example shows "graph" mode, and here the third column "previous" indicates change against previous iteration. It is just to visualise what program (its RAM occupation) is growing or shrinking.
@@ -86,19 +79,7 @@ Important note: The script should be *run as root* or you will not get data for 
 
 == Additional memory utilization info, introduced from 0.9.4 ==
 
-From this release you can use swith "-m" / "-more" to get two additional lines:
-
-{{{
-# python3 memtop-0.9.5.py -m -p 2 -l 2
-
-   PID |   private/writ. mem |command                        09 Mar 08:30:42
-       |  current |  change  |(might be truncated)          (waiting 2 min.)
-  5801 | 291.6 MB |  --      |/usr/lib/iceweasel/firefox-bin                
- 11457 | 182.6 MB |          |gimp                                          
-   Writeable/RAM: =========================  90.7%
-   RAM use without cached pages: 48.7% , SWAP use: 32.7%
-   Swapping: 0.1 / 0.0, Paging: 0.7 / 31.1 (in/out / sec / period)
-}}}
+From this release you can use swith "-m" / "-more" to get two additional lines, see example above.
 
 While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
 
@@ -118,25 +99,20 @@ Second new line and last one in the example is about swapping & paging. This inf
 From 0.9.6 you can use swith -L/--log that will create file memtop.log in current directory, with content like:
 
 {{{
-##Date     time   writeable ramuse swapuse
-04/04/2012 14:24    98.9    57.8   19.3
-04/04/2012 14:25    99.0    59.0   19.3
-04/04/2012 14:26    98.8    58.2   19.3
-04/04/2012 14:27    98.9    59.0   19.3
-04/04/2012 14:28    98.9    58.1   19.3
+##Date     time   wrtble ram   swap     pgin   pgout TopApp:PID writble(B)   command
+10/04/2012 11:29   80.0  43.3  19.9      0.0     0.0   18005    419979264 /opt/firefox-10/firefox 
+10/04/2012 11:30   80.0  43.4  19.9      0.0    6.18   18005    420384768 /opt/firefox-10/firefox 
+10/04/2012 11:31   78.8  43.0  19.9      0.0     3.3   18005    400646144 /opt/firefox-10/firefox 
+10/04/2012 11:32   78.8  43.0  19.9     1.72    1.72   18005    400646144 /opt/firefox-10/firefox 
+10/04/2012 11:33   78.8  43.6  19.9      0.0   18.82   18005    401170432 /opt/firefox-10/firefox 
+10/04/2012 11:34   78.8  43.8  19.9      0.0   19.63   18005    401367040 /opt/firefox-10/firefox 
 }}}
 
-The columns are: 
-
-  * writeable/RAM
-  * RAM use / total RAM
-  * SWAP use / total swap. 
-
-(the very same same numbers you see in console output)
+The log provides the very same numbers as memtop prints out in console, but in a form that is easy to use with gnuplot, or f.e. import to office suite..
 
 
 
-With memtop-graph-vX.pg script (see download section, gnuplot needed) you can create graphs from the memtop.log (memtop-graph-vX.gp expects memtop.log file in current directory)
+You can use my own gnuplot script (see download section, gnuplot needed) to use the log file. (memtop-graph-vX.gp expects memtop.log file in current directory)
 
 {{{
    $ ./memtop-graph.pg > anyname.png    
@@ -146,7 +122,7 @@ and you can get image like this:
 
 http://memtop.googlecode.com/files/out.png
 
-Of course, nothing special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heapily. The drop on the end of graph happened when I killed those instances.
+Obviously, nothing much special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heapily. The drop on the end of graph happened when I killed those instances.
 
 
 
