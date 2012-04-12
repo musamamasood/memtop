@@ -124,7 +124,9 @@ http://memtop.googlecode.com/files/out.png
 
 Obviously, nothing much special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heapily. The drop on the end of graph happened when I killed those instances.
 
-* another example: memory exhaustion *
+<br>
+
+* Another example: memory exhaustion *
 
 Here in this example I started two instances of gimp and started some memory intensive operations (resizing). Outcome of this you can see below:
 
