@@ -137,7 +137,8 @@ Here in this example I started two instances of gimp and started some memory int
 12/04/2012 13:56  154.2  92.1  69.9  6345.05 8097.35  86.5    3431    1391740  gimp                
 # few lines skipped here
 12/04/2012 14:01  156.0  92.5  75.1  4334.27 2395.05  83.0    3431    1390860  gimp 
-12/04/2012 14:02  163.9  90.9  92.1  4544.95 4394.79  77.2    3431    1390860  gimp   #second instance of gimp launched             
+12/04/2012 14:02  163.9  90.9  92.1  4544.95 4394.79  77.2    3431    1390860  gimp   
+# second instance of gimp launched here          
 12/04/2012 14:03  172.4  93.2 100.0  6013.65 1994.96  88.6    3431    1390860  gimp                
 12/04/2012 14:05  172.4  93.7 100.0  5885.28  791.90  91.1    3431    1390860  gimp   
 # here the first (bigger) instance of gimp killed OOM killer probably
