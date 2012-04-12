@@ -141,7 +141,7 @@ Here in this example I started two instances of gimp and started some memory int
 # second instance of gimp launched here          
 12/04/2012 14:03  172.4  93.2 100.0  6013.65 1994.96  88.6    3431    1390860  gimp                
 12/04/2012 14:05  172.4  93.7 100.0  5885.28  791.90  91.1    3431    1390860  gimp   
-# here the first (bigger) instance of gimp killed OOM killer probably
+# here the first (bigger) instance of gimp killed (by OOM killer probably)
 12/04/2012 14:06   80.2  41.7  24.0  6844.10  212.41  92.3    3692     379772  /opt/firefox-10/firefox 
 12/04/2012 14:07   81.4  42.5  23.4   763.69    8.63  12.0    3692     379264  /opt/firefox-10/firefox 
 12/04/2012 14:08   81.4  42.5  23.4     0.76    2.06   0.0    3692     379392  /opt/firefox-10/firefox 
