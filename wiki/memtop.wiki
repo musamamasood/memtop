@@ -100,7 +100,7 @@ And the other line looks like:
 Swapping: 0.0 / 0.0, Paging: 0.0 / 1.1 (in/out / sec). CPU I/O wait: 0.0 %
 }}}
 
-This should be pretty self-explanatory, I will just add that the data are calculates (for this second line) for whole current (or rather just ending) period.
+This should be pretty self-explanatory, I will just add that the data are calculated (for this second line) for whole (just ending) period.
 
 
 <br>
