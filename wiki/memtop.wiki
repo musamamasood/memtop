@@ -36,8 +36,8 @@ One example is better then ten lines of description
   1578 |  24.9 MB |          |/usr/sbin/rsyslogd -c4                                                       
  24192 |  23.1 MB |          |/usr/lib/virtualbox/VirtualBox                                               
    Writeable/RAM: ===============================  80.0%
-   RAM use without cached pages: 43.4% , SWAP use: 19.9%                 # enabled with -m option
-   Swapping: 0.0 / 0.0, Paging: 0.0 / 6.2 (in/out / sec / period)        # enabled with -m option
+   RAM use without cached pages: 43.4% , SWAP use: 19.9%                       # enabled with -m option
+   Swapping: 0.0 / 0.0, Paging: 0.0 / 6.2 (in/out / sec). CPU I/O wait: 0.0 %   # enabled with -m option
 
    PID |   private/writ. mem |command                                                       10 Apr 11:31:21
        |  current |  change  |(might be truncated)                                         (waiting 1 min.)
@@ -53,7 +53,7 @@ One example is better then ten lines of description
  24192 |  23.1 MB |          |/usr/lib/virtualbox/VirtualBox                                               
    Writeable/RAM: ==============================  78.8%
    RAM use without cached pages: 43.0% , SWAP use: 19.9%
-   Swapping: 0.0 / 0.0, Paging: 0.0 / 3.3 (in/out / sec / period)
+   Swapping: 0.0 / 0.0, Paging: 0.0 / 3.3 (in/out / sec). CPU I/O wait: 0.0 %
 }}}
 
 This example shows "graph" mode, and here the third column "previous" indicates change against previous iteration. It is just to visualise what program (its RAM occupation) is growing or shrinking.
