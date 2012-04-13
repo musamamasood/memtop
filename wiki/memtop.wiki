@@ -79,17 +79,28 @@ Important note: The script should be *run as root* or you will not get data for 
 
 == Additional memory utilization info, introduced from 0.9.4 ==
 
-From this release you can use swith "-m" / "-more" to get two additional lines, see example above.
+From this release you can use swith "-m" / "-more" to get two additional lines. Those two lines do not deal with individual applications but memory consumptions overall.
 
-While "writeable" information can be used to track memory use of single processes, especially memory leaks and so, "RAM use without cached pages" gives single number of your physical RAM utilization. It based on /proc/meminfo and consideres three lines:
+{{{
+   RAM use without cached pages: 43.6% , SWAP use: 19.1%
+}}}
+
+It takes data from /proc/meminfo and consideres following lines:
+
 
   * Memtotal - as size of your RAM
-  * Memfree  - as free portion of RAM
-  * Cached   - "...in-memory cache for files read from the disk..." - this portion of RAM is not reported as free (not included in MemFree) but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed
+  * Memfree - as free portion of RAM
+  * Cached - "...in-memory cache for files read from the disk..." - this portion of RAM is not reported in Memfree as free memory, but due to the character of data, kernel can drop stored data immediately and use freed capacity as needed, therefore this chung of data is considered as free memory by memtop
+  * Swaptotal
+  * Swapfree
 
-To calculate SWAP use it uses Swaptotal & Swapfree lines from /proc/meminfo.
+And the other line looks like:
 
-Second new line and last one in the example is about swapping & paging. This information doesn't say "How full your RAM is" but monitors symptoms of RAM shortage. 
+{{{
+Swapping: 0.0 / 0.0, Paging: 0.0 / 1.1 (in/out / sec). CPU I/O wait: 0.0 %
+}}}
+
+This should be pretty self-explanatory, I will just add that the data are calculates (for this second line) for whole current (or rather just ending) period.
 
 
 <br>
