@@ -119,17 +119,20 @@ From 0.9.6 you can use swith -L/--log that will create file memtop.log in curren
 10/04/2012 11:34   78.8  43.8  19.9      0.0   19.63   18005    401367040 /opt/firefox-10/firefox 
 }}}
 
-The log provides the very same numbers as memtop prints out in console, but in a form that is easy to use with gnuplot, or f.e. import to office suite..
+The log provides the very same numbers as memtop prints out in console, but in a form that is easy to use with gnuplot, or f.e. to import into office suite..
 
 
 
-You can use my own gnuplot script (see download section, gnuplot needed) to use the log file. (memtop-graph-vX.gp expects memtop.log file in current directory)
+You can use my own shell script (see download section, gnuplot needed) to create two graphs from the log file. Use:
 
 {{{
-   $ ./memtop-graph.pg > anyname.png    
+   $ ./memtop-graph.sh  mem2.log 
+   Input file:  mem2.log
+   Creating:    PgInOut.png
+   Creating:    MemStat.png 
 }}}
 
-and you can get image like this: 
+If not argument given, it expects memtop.log file in current directory. Example of output: 
 
 http://memtop.googlecode.com/files/out.png
 
