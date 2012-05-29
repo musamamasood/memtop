@@ -132,11 +132,11 @@ You can use my own shell script (see download section, gnuplot needed) to create
    Creating:    MemStat.png 
 }}}
 
-If not argument given, it expects memtop.log file in current directory. Example of output: 
+If no argument is given, it expects memtop.log file in current directory. Example of output: 
 
 http://memtop.googlecode.com/files/out.png
 
-Obviously, nothing much special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heapily. The drop on the end of graph happened when I killed those instances.
+Obviously, nothing much special here. The box was idle most of time, just RAM utilization was growing steadily, this was caused by few instances of xfe leaking heappily. The drop on the end of graph happened when I killed those instances.
 
 <br>
 
