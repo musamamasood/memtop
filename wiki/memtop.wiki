@@ -16,7 +16,7 @@ The script calculates amount of private/writeable for each process (using /proc/
   * there are other tools to show this kind of info (shared memory use), so there is no need to have it included also here
 
 
-In addition to pure listing of processes and their memory use, it can track memory use in general way and help you identify periods when your system is short of RAM and how bad it is. For more info, scroll down to "Additional memory utilization info" section.
+In addition to pure listing of processes and their memory use, it can track memory use in general way and help you identify periods when your system is short of RAM and how bad it is. For more info, scroll down to "Overall system memory utilization info" section.
 
 
 
@@ -79,9 +79,9 @@ Important note: The script should be *run as root* or you will not get data for 
 
 <br>
 
-== Additional memory utilization info, introduced from 0.9.4 ==
+== Overall system memory utilization info (introduced from 0.9.4) ==
 
-From this release you can use swith "-m" / "-more" to get two additional lines. Those two lines do not deal with individual applications but memory consumptions overall.
+From this release you can use swith "-m" / "-more" to get two additional lines. Those two lines do not deal with individual applications but are depicting overall utlization of system memory and some other symptomps of possible memory shortage. First line shows how much of your RAM is free, how much of your swap space is utilized:
 
 {{{
    RAM use without cached pages: 43.6% , SWAP use: 19.1%
@@ -102,12 +102,12 @@ And the other line looks like:
 Swapping: 0.0 / 0.0, Paging: 0.0 / 1.1 (in/out / sec). CPU I/O wait: 0.0 %
 }}}
 
-This should be pretty self-explanatory, I will just add that the data are calculated (for this second line) for whole (just ending) period.
+This should be pretty self-explanatory. In case you dont understand what are these numbers about, the higher numbers the worser. Technical note: the data are calculated (for this second line) for whole (just ending) period.
 
 
 <br>
 
-== Loging + Graphs from logs (from 0.9.6) ==
+== Loging + Visualisation (graphs) of logs (from 0.9.6) ==
 
 From 0.9.6 you can use swith -L/--log that will create file memtop.log in current directory, with content like:
 
@@ -142,9 +142,9 @@ Obviously, nothing much special here. The box was idle most of time, just RAM ut
 
 <br>
 
-* Another example: memory exhaustion *
+== Another example: memory exhaustion ==
 
-Here in this example I started two instances of gimp and started some memory intensive operations (resizing). Outcome of this you can see below:
+This is like a case study where you can see how system memory exhaustion looks  in numbers. Here I started two instances of gimp and started some memory intensive operations (resizing). Outcome of this you can see below:
 
 {{{
 ##Date     time   wrtble ram   swap     pgin   pgout   IOw TopApp:PID wrtbl(KB) command
