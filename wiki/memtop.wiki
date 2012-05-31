@@ -6,7 +6,7 @@ Intended to help you to analyse and understand *system memory utilization* of yo
 
 To simplify analysis, it can create log file and you can donwload here also simple script to generate graphs from it afterwards.
 
-Typical situation is when you need to reduce RAM usage of your box or you want to monitor your system for longer period of time to find out misbehaving applications. 
+Typical situation is when you need to reduce RAM usage of your box or you want to monitor your system for longer period of time to *identify misbehaving applications*. 
 
 The script calculates amount of private/writeable for each process (using /proc/$PID/maps files) and prints biggest ones. It completely *ignores private/non-writeable and shared memory*. The reasons are:
 
