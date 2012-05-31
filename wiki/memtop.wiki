@@ -4,7 +4,7 @@
 
 Intended to help you to analyse and understand *system memory utilization* of your linux box and check *memory consumption of processes* running there. It is intended to run in long-period iterations to let you see changes in overall memory utilization and consumption of individual processes.
 
-To simplify analysis, it can create log file and you can donwload here also simple script to generate graphs from it afterwards.
+To simplify analysis it can create a log file and here you can also donwload a  simple script to generate graphs from it.
 
 Typical situation is when you need to reduce RAM usage of your box or you want to monitor your system for longer period of time to *identify misbehaving applications*. 
 
