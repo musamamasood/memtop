@@ -81,7 +81,7 @@ Important note: The script should be *run as root* or you will not get data for 
 
 == Overall system memory utilization info (introduced from 0.9.4) ==
 
-From this release you can use swith "-m" / "-more" to get two additional lines. Those two lines do not deal with individual applications but are depicting overall utlization of system memory and some other symptomps of possible memory shortage. First line shows how much of your RAM is free, how much of your swap space is utilized:
+From this release you can use swith "-m" / "-more" to get two additional lines. Those two lines do not deal with individual applications but are depicting overall utlization of system memory and some other symptomps of possible memory shortage. First line shows how much of your RAM & swap space is utilized:
 
 {{{
    RAM use without cached pages: 43.6% , SWAP use: 19.1%
