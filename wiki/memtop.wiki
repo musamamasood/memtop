@@ -175,3 +175,10 @@ Also I added info about swapping/pagging (see above) and made couple of cosmethi
 <br>
 
 **Any comments welcomed!!!**
+
+<br>
+------
+
+_Below the line comment:_
+
+_I am working on similar tool - [http://code.google.com/p/pmtrack/wiki/PmtrackIntroduction private memory tracker]. This is simple command line tool (written in C++) to monitor (private/writeable) memory consumption of a proces during period of time (or whole lifecycle)._
