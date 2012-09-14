@@ -75,7 +75,9 @@ No installation is needed, just run the script. Available parameters are
 
 If you have downloaded&saved the memtop to a directory not in your path, you can consider using an alias for root, f.e. put following (use the correct path of course)in /root/.bashrc file:
 
+{{{
    alias memtop='/home/tibor/dev/memtop/memtop-1.0.2.py'
+}}}
 
 Important note: The script should be *run as root* or you will not get data for processes running under other users.
 
