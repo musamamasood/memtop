@@ -73,7 +73,7 @@ No installation is needed, just run the script. Available parameters are
 || -L || log data to file, see section about graphs below||
 ||-h||help||
 
-If you have downloaded&saved the memtop to a directory not in your path, you can consider using an alias for root, f.e. put following in /root/.bashrc file:
+If you have downloaded&saved the memtop to a directory not in your path, you can consider using an alias for root, f.e. put following (use the correct path of course)in /root/.bashrc file:
 
    alias memtop='/home/tibor/dev/memtop/memtop-1.0.2.py'
 
