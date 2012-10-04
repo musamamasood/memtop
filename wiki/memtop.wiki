@@ -173,7 +173,7 @@ This is like a case study where you can see how system memory exhaustion looks  
 
 == What's next? ==
 
-Well, I have no ideas. Currently I am only fixing small issues if any created in Issues section or if I receive an email. However if you have any idea, let me know.
+Well, I have no ideas. Currently I am only fixing small issues if any created in Issues section or if I receive an email. So if you have any idea, let me know.
 
 <br>
 
