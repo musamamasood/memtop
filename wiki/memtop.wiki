@@ -183,6 +183,6 @@ Also I added info about swapping/pagging (see above) and made couple of cosmethi
 <br>
 ------
 
-_The Memtop is distributed for free and under GPL license. I dont expect earning big money from this, but if the tool is useful for you, you can consider paying a voluntary price for the time I spent developing and maintaining Memtop._
+_The Memtop is distributed for free and under GPL license. I dont expect earning big money from this, but if the tool is useful for you, you can consider paying a voluntary price for the time I spent developing and maintaining it._
 
 <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GBERSY833N4AA" target="_blank"><img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0"></img></a>
