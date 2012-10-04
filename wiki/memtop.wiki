@@ -171,14 +171,13 @@ This is like a case study where you can see how system memory exhaustion looks  
 
 <br>
 
-== Changes after 0.9.0 ==
+== What's next? ==
 
-After some three years I resumed my work on this tool, I "ported" it to python3 (so *python2.7 or newer are required now*) and fixed problems when grepping its output. Sometimes it did not get through pipe at all (I dont understand why) but the main problem was that the grep command used to return error "Binary file matches". It showed that names of listed programs contained binary characters, not visible in console but still affecting grep.
-Also I added info about swapping/pagging (see above) and made couple of cosmethic enhancements and internall house-keeping of the code.
+Well, I have no ideas. Currently I am only fixing small issues if any created in Issues section or I am receive an email. However if you have any idea, let me know.
 
 <br>
 
-**Any comments welcomed!!!**
+My email:  tiborb95 at gmail dot com
 
 <br>
 ------
