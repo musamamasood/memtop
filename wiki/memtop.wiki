@@ -2,7 +2,11 @@
 
 = ATTENTION: the project moved to https://github.com/MartinThoma/memtop=
 
-*New wiki: https://github.com/MartinThoma/memtop/wiki *
+*Up-to-date introduction here: http://pythonhosted.org/memtop/*
+
+<br>
+<br>
+<br>
 
 = Introduction =
 
