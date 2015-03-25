@@ -1,5 +1,8 @@
 #summary Displays memory consumption of processes in easy to read way.
 
+= ATTENTION: the project moved to https://github.com/MartinThoma/memtop=
+
+
 = Introduction =
 
 Intended to help you to analyse and understand *system memory utilization* of your linux box and check *memory consumption of processes* running there. It is intended to run in long-period iterations to let you see changes in overall memory utilization and consumption of individual processes.
